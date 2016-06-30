@@ -10,6 +10,13 @@
 #ifndef HEADER_H
 #define HEADER_H
 
+struct node
+{
+    int val;            //value
+    struct node* left;  //left child
+    struct node* right; //right child
+    int ht;             //height of the node
+} node;
 
 
 #endif /* HEADER_H */

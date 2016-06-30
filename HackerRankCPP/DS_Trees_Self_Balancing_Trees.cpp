@@ -2,13 +2,11 @@
  * 
  */
 
-#include "Header.h"
-
-//Still have a Segmentation Fault... I hate C/C++
-
+//TODO: Fix all the rotates to check for nulls
 node *rotate_Right(node *x, node *z)
 {
-    node *temp = z->left;
+    node *temp = (node*)malloc(sizeof(node));
+    temp = z->left;
     x->right = temp;
     z->left = x;
     return z;
@@ -16,7 +14,8 @@ node *rotate_Right(node *x, node *z)
 
 node *rotate_Left(node *x, node *z)
 {
-    node *temp = z->right;
+    node *temp = (node*)malloc(sizeof(node));
+    temp = z->right;
     x->left = temp;
     z->right = x;
     return z;
@@ -24,11 +23,14 @@ node *rotate_Left(node *x, node *z)
 
 node *rotate_RightLeft(node *x,node *z)
 {
-    node *y = z->left;
-    node *temp1 = y->right;
+    node *temp1 = (node*)malloc(sizeof(node));
+    node *temp2 = (node*)malloc(sizeof(node));
+    node *y = (node*)malloc(sizeof(node));
+    y = z->left;
+    temp1 = y->right;
     z->left = temp1;
     y->right = z;
-    node *temp2 = y->left;
+    temp2 = y->left;
     z->right = temp2;
     y->left = x;
     return y;
@@ -36,11 +38,14 @@ node *rotate_RightLeft(node *x,node *z)
 
 node *rotate_LeftRight(node *x, node *z)
 {
-    node *y = z->right;
-    node *temp1 = y->left;
+    node *temp1 = (node*)malloc(sizeof(node));
+    node *temp2 = (node*)malloc(sizeof(node));
+    node *y = (node*)malloc(sizeof(node));
+    y = z->right;
+    temp1 = y->left;
     z->right = temp1;
     y->left = z;
-    node *temp2 = y->right;
+    temp2 = y->right;
     z->left = temp2;
     y->right = x;
     return y;
@@ -70,6 +75,8 @@ int getBalanceFactor(node *root)
     return (root->left->ht) - (root->right->ht);
 }
 
+
+//LOCATION OF THE SEGEMENTAION FAULT
 node *rebalanceNode(node *root)
 {
     if(getBalanceFactor(root) < 1)
@@ -77,7 +84,7 @@ node *rebalanceNode(node *root)
         if(getBalanceFactor(root->left) > 0)
         {
             //LeftRight Case
-            return rotate_LeftRight(root, root->left);
+            return rotate_LeftRight(root, root->right);
         }
         else
         {
@@ -90,7 +97,7 @@ node *rebalanceNode(node *root)
         if(getBalanceFactor(root) < 0)
         {
             //RightLeft Case
-            return rotate_RightLeft(root, root->right);
+            return rotate_RightLeft(root, root->left);
         }
         else
         {
@@ -104,7 +111,7 @@ node *rebalanceNode(node *root)
 node *insert(node *root, int value)
 {
    if(root == 0){
-       node *temp = new node;
+       node *temp = (node*)malloc(sizeof(node));
        temp->val = value;
        temp->left = 0;
        temp->right = 0;
@@ -115,7 +122,7 @@ node *insert(node *root, int value)
        if(root->left != 0)
            insert(root->left, value);
        else{
-           node *temp = new node;
+           node *temp = (node*)malloc(sizeof(node));
            temp->val = value;
            temp->left = 0;
            temp->right = 0;
@@ -127,7 +134,7 @@ node *insert(node *root, int value)
        if(root->right != 0)
            insert(root->right, value);
        else{
-           node *temp = new node;
+           node *temp = (node*)malloc(sizeof(node));
            temp->val = value;
            temp->left = 0;
            temp->right = 0;

@@ -13,8 +13,10 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>Balanced_Trees.cpp</itemPath>
-      <itemPath>Introduction.cpp</itemPath>
+      <itemPath>CPP_Introduction.cpp</itemPath>
+      <itemPath>DS_Stacks_Balanced_Brackets.cpp</itemPath>
+      <itemPath>DS_Stacks_Maximum_Element.cpp</itemPath>
+      <itemPath>DS_Trees_Self_Balancing_Trees.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -42,11 +44,15 @@
           <standard>11</standard>
         </ccTool>
       </compileType>
-      <item path="Balanced_Trees.cpp" ex="false" tool="1" flavor2="0">
+      <item path="CPP_Introduction.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="DS_Stacks_Balanced_Brackets.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="DS_Stacks_Maximum_Element.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="DS_Trees_Self_Balancing_Trees.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Header.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="Introduction.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -72,11 +78,15 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
-      <item path="Balanced_Trees.cpp" ex="false" tool="1" flavor2="0">
+      <item path="CPP_Introduction.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="DS_Stacks_Balanced_Brackets.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="DS_Stacks_Maximum_Element.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="DS_Trees_Self_Balancing_Trees.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Header.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="Introduction.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>

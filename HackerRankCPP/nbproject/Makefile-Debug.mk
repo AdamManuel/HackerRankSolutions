@@ -35,8 +35,10 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/Balanced_Trees.o \
-	${OBJECTDIR}/Introduction.o \
+	${OBJECTDIR}/CPP_Introduction.o \
+	${OBJECTDIR}/DS_Stacks_Balanced_Brackets.o \
+	${OBJECTDIR}/DS_Stacks_Maximum_Element.o \
+	${OBJECTDIR}/DS_Trees_Self_Balancing_Trees.o \
 	${OBJECTDIR}/main.o
 
 
@@ -64,15 +66,25 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/hackerrankcpp: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/hackerrankcpp ${OBJECTFILES} ${LDLIBSOPTIONS}
 
-${OBJECTDIR}/Balanced_Trees.o: Balanced_Trees.cpp 
+${OBJECTDIR}/CPP_Introduction.o: CPP_Introduction.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Balanced_Trees.o Balanced_Trees.cpp
+	$(COMPILE.cc) -g -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/CPP_Introduction.o CPP_Introduction.cpp
 
-${OBJECTDIR}/Introduction.o: Introduction.cpp 
+${OBJECTDIR}/DS_Stacks_Balanced_Brackets.o: DS_Stacks_Balanced_Brackets.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Introduction.o Introduction.cpp
+	$(COMPILE.cc) -g -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/DS_Stacks_Balanced_Brackets.o DS_Stacks_Balanced_Brackets.cpp
+
+${OBJECTDIR}/DS_Stacks_Maximum_Element.o: DS_Stacks_Maximum_Element.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/DS_Stacks_Maximum_Element.o DS_Stacks_Maximum_Element.cpp
+
+${OBJECTDIR}/DS_Trees_Self_Balancing_Trees.o: DS_Trees_Self_Balancing_Trees.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/DS_Trees_Self_Balancing_Trees.o DS_Trees_Self_Balancing_Trees.cpp
 
 ${OBJECTDIR}/main.o: main.cpp 
 	${MKDIR} -p ${OBJECTDIR}
